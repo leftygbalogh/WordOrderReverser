@@ -19,7 +19,7 @@ public class Redrodrow {
     public static String changeWordOrder(String text) {
         List<String> wordsInOriginalOrder = new ArrayList<String>();
         String reversedWords = "";
-        String pat = "([a-z0-9-_.?!]*)( |$|\\n)";
+        String pat = "([A-Za-z0-9-_.?!,;']*)( |$|\\n)";
 
         Pattern pattern = Pattern.compile(pat);
         Matcher matcher = pattern.matcher(text);
@@ -38,7 +38,7 @@ public class Redrodrow {
 
     public static void main(String[] args) {
         System.out.println(changeWordOrder("meg nyilnak a ketrben"));
-        
+
         String lipsumDotCom = "Mauris cursus sem semper nunc feugiat dapibus. "
                 + "Nunc non efficitur sapien. Quisque tempus ante tempor turpis blandit dapibus. "
                 + "Proin in porttitor lectus. "
@@ -73,9 +73,17 @@ public class Redrodrow {
                 + "10	That slepen al the nyght with open eye-\n"
                 + "(So priketh hem Nature in hir corages);\n"
                 + "Thanne longen folk to goon on pilgrimages";
+
+        String kalevala = "Mieleni minun tekevi, aivoni ajattelevi \n"
+                + "lähteäni laulamahan, saa'ani sanelemahan, \n"
+                + "sukuvirttä suoltamahan, lajivirttä laulamahan. \n"
+                + "Sanat suussani sulavat, puhe'et putoelevat, \n"
+                + "kielelleni kerkiävät, hampahilleni hajoovat.";
+
         System.out.println(changeWordOrder(lipsumDotCom));
         System.out.println(changeWordOrder(juhaszGyula));
         System.out.println(changeWordOrder(canterburyTales));
+        System.out.println(changeWordOrder(kalevala));
     }
 
 }
