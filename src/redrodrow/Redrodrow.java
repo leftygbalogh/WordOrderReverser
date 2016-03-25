@@ -37,8 +37,7 @@ public class Redrodrow {
     }
 
     public static void main(String[] args) {
-        System.out.println(changeWordOrder("meg nyilnak a ketrben"));
-
+        
         String lipsumDotCom = "Mauris cursus sem semper nunc feugiat dapibus. "
                 + "Nunc non efficitur sapien. Quisque tempus ante tempor turpis blandit dapibus. "
                 + "Proin in porttitor lectus. "
